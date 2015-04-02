@@ -63,13 +63,16 @@ Happy Developing!
 
 @black:						#000;
 @white:						#fff;
+@gray:						#666;
+@light-gray:				#ccc;
+@blue: 						#137ca6;
 
 
 // ====================================
 //	General Selectors
 // ====================================
 
-body{ font-size: 14px; color: @black; }
+body{ font-size: 14px; color: #222222; }
 
 h1, h2, h3, h4, h5, h6{ font-family: @primaryFontFamily; }
 
@@ -133,11 +136,93 @@ blockquote{}
 // Header // Your Main Header Css goes here.
 // ====================================
 
-// #main-header{ }
+#main-header{
+	background-color: @white;
+	-webkit-box-shadow: 0px 5px 51px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 5px 51px 0px rgba(0,0,0,0.45);
+	box-shadow: 0px 5px 51px 0px rgba(0,0,0,0.45);
+	.relative;
 
-// @import "dropdown_menu.less"; // Use this Dropdown Menu to save time
+	.logo {
+		cursor: pointer;
 
+		img {max-height: 95px;}
+	}
+	ul {
+		list-style: none;
+		margin-bottom: 0;
 
+		li {
+			display: inline-block;
+			border-left: 1px solid @light-gray;
+			border-right: 1px solid @light-gray;
+			margin-right: -5px;
+
+			a {
+				color: @gray;
+				display: block;
+				padding: 40px 30px 35px;
+				cursor: pointer;
+
+				&:hover {
+					color: @white;
+					text-decoration: none;
+					background-color: @blue;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	&:after {
+		content: " ";
+		position: absolute;
+		background-image: url("../img/index/wave-header.png");
+		background-size: 100% 100%;
+		background-position: center;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 304px;
+		width: 100%;
+	}
+}
+
+@import "dropdown_menu.less"; // Use this Dropdown Menu to save time
+
+@lightColor:				#fff;
+@darkColor:				#333;
+
+#main-nav{
+	ul{ // padding: 0px; // Customize This!
+
+		li{ // padding: 0px 10px; // Customize This!
+
+			a{  color: @lightColor; // Customize This!
+				&:hover{ color: @darkColor; // Customize This! 
+				}
+			}
+			&:hover { 
+				>a{ color: @darkColor; } // Customize This!
+			}
+		}
+		ul{ background-color: @darkColor; // Customize This!
+			li{
+				&:hover{ background-color: darken(@darkColor, 10%); // Customize This!
+					a{ color: @lightColor; } // Customize This!
+				}
+				>a{ color: @lightColor; // Customize This! }
+			}//end li
+
+				>li { &:hover{  background-color: darken(@darkColor, 10%);  // Customize This!
+						a{ color: @lightColor; } // Customize This!
+					}
+					a{ }
+				}//end li
+			}//end ul
+		}//end ul
+	}//end ul
+}//end #main-nav
 // Bootstrap collapse classese
 // .navbar-toggle{
 // 	.icon-bar{ background-color: @black; }

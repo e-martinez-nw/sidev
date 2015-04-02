@@ -46,42 +46,18 @@
 	?>
 
 	<header id="main-header">
-		<nav class="navbar" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-			      	<h1 class="none"><?php bloginfo('name'); ?></h1>
-			      </a>
-			    </div>
-
-				<nav id="main-nav" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Nosotros</a></li>
-						<li><a href="#">Proyectos</a>
-							<ul>
-								<li><a href="#">Lorem ipsum</a></li>
-								<li><a href="#">Lorem ipsum</a></li>
-								<li><a href="#">Lorem ipsum</a>
-									<ul>
-										<li><a href="#">Lorem ipsum</a></li>
-										<li><a href="#">Lorem ipsum</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#">Blog</a></li>
-					</ul>
-				</nav>
-
-			</div><!-- /.container-fluid -->
-		</nav><!-- /navbar -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2">
+					<a href="<?php bloginfo('url'); ?>" class="logo">
+						<img src="<?php bloginfo('template_url'); ?>/img/index/sidev.png" />
+					</a>
+				</div><!-- col-sm-2 -->
+				<div class="col-sm-10">
+					<?php nw_main_nav(); ?>
+				</div><!-- col-sm-10 -->
+			</div>
+		</div>
 	</header><!-- /#main-header -->
 
 

@@ -80,24 +80,34 @@ function nw_register_sidebars() {
 	// DOCS: http://codex.wordpress.org/Function_Reference/dynamic_sidebar
 
 	register_sidebar(array(
-		'id' => 'sidebar1', // Change the id
-		'name' => 'Sidebar 1', // Change the name
-		'description' => 'The first (primary) sidebar.',
+		'id' => 'forjando-titulo', // Change the id
+		'name' => 'Título Header', // Change the name
+		'description' => 'The first (primary) sidebar.', // Better change description too!
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));	
+
+	register_sidebar(array(
+		'id' => 'automatizacion', // Change the id
+		'name' => 'Automatización', // Change the name
+		'description' => 'The first (primary) sidebar.', // Better change description too!
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
 
-	// register_sidebar(array(
-	// 	'id' => 'sidebar2', // Change the id
-	// 	'name' => 'Sidebar 2', // Change the name
-	// 	'description' => 'The first (primary) sidebar.', // Better change description too!
-	// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	// 	'after_widget' => '</div>',
-	// 	'before_title' => '<h4 class="widgettitle">',
-	// 	'after_title' => '</h4>',
-	// ));
+	register_sidebar(array(
+		'id' => 'tecnologias', // Change the id
+		'name' => 'Tecnologías', // Change the name
+		'description' => 'The first (primary) sidebar.', // Better change description too!
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
 } // don't remove this bracket!
 

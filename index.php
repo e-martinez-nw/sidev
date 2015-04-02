@@ -1,25 +1,22 @@
 <?php get_header(); ?>
-
-	<?php if (have_posts()) : // Show latest posts as default ?>
-
-		<?php // include('carousel.php'); ?>
-		
-		<?php while (have_posts()) : the_post(); ?>
-			<article>
-				<header>
-					<?php the_title('<h2>','</h2>'); ?>
-				</header>
-
-				<?php the_excerpt(); ?>
-
-				<footer>
-					<?php the_tags('',',',''); ?>
-				</footer>
-			</article>
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-
-	<?php endif;?>
-
+	<section id="forjando">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="titulo">
+						<?php dynamic_sidebar( 'forjando-titulo' ); ?>
+					</div><!-- .forjando -->
+				</div><!-- col-sm-12 -->
+				<div class="col-sm-6">
+					<div class="automatizacion">
+						<?php dynamic_sidebar( 'automatizacion' ); ?>
+					</div><!-- .automatizacion -->
+					<div class="tecnologias">
+						<?php dynamic_sidebar( 'tecnologias' ); ?>
+					</div><!-- .tecnologias -->
+				</div><!-- col-sm-6 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- .forjando -->
 
 <?php get_footer(); ?>
