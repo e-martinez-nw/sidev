@@ -134,17 +134,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/assets\/logotipo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 13778,
-		"inputAbbreviatedPath": "\/img\/assets\/logotipo.png",
-		"outputAbbreviatedPath": "\/img\/assets\/logotipo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/assets\/win8-tile-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -156,13 +145,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/background\/NwField-1366x768.png": {
+	"\/img\/background\/lines.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 65540,
-		"inputAbbreviatedPath": "\/img\/background\/NwField-1366x768.png",
-		"outputAbbreviatedPath": "\/img\/background\/NwField-1366x768.png",
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/background\/lines.png",
+		"outputAbbreviatedPath": "\/img\/background\/lines.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -226,7 +215,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 34050,
+		"initialSize": 36311,
 		"inputAbbreviatedPath": "\/img\/index\/wave-header.png",
 		"outputAbbreviatedPath": "\/img\/index\/wave-header.png",
 		"outputPathIsOutsideProject": 0,
@@ -2997,6 +2986,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/widget\/widget-custom-link.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/widget\/widget-custom-video.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/widget\/widget-custom-video.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

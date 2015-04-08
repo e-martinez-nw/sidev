@@ -10,11 +10,6 @@
 
 					<?php the_content(); ?>
 
-					<footer>
-						<p><?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
-					</footer>
-
-					<?php comments_template(); ?>
 				</article>
 
 			<?php endwhile;?>
@@ -23,6 +18,5 @@
 			<?php // there is no data ?>
 		<?php endif; ?>
 
-		<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

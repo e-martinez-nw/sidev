@@ -20,7 +20,7 @@
 	<!--[if IE]>
 		<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/assets/favicon.ico">
 	<![endif]-->
-	<meta name="msapplication-TileColor" content="#f8e047">
+	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/img/assets/win8-tile-icon.png">
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -55,10 +55,8 @@
 				</div><!-- col-sm-2 -->
 				<div class="col-sm-10">
 					<?php nw_main_nav(); ?>
+					<!-- <div class="dropdown_bg"></div> -->
 				</div><!-- col-sm-10 -->
 			</div>
 		</div>
 	</header><!-- /#main-header -->
-
-
-

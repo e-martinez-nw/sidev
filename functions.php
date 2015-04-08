@@ -31,6 +31,7 @@ Create your own Post Type:
 // add_image_size( 'slide-1500-500', 1500, 500, true );
 add_image_size( 'slide-1920-460', 1920, 460, true ); // default fullwith carousel slide
 
+add_image_size( 'header-thumb', 1920, 240, true );
 add_image_size( 'bg-thumbnail', 640, 480, true );
 add_image_size( 'md-thumbnail', 360, 270, true );
 add_image_size( 'sm-thumbnail', 203, 152, true );
@@ -80,7 +81,7 @@ function nw_register_sidebars() {
 	// DOCS: http://codex.wordpress.org/Function_Reference/dynamic_sidebar
 
 	register_sidebar(array(
-		'id' => 'forjando-titulo', // Change the id
+		'id' => 'index-titulo', // Change the id
 		'name' => 'Título Header', // Change the name
 		'description' => 'The first (primary) sidebar.', // Better change description too!
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -100,8 +101,28 @@ function nw_register_sidebars() {
 	));
 
 	register_sidebar(array(
+		'id' => 'intelligent-smart', // Change the id
+		'name' => 'Intelligent Smart Grid', // Change the name
+		'description' => 'The first (primary) sidebar.', // Better change description too!
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
 		'id' => 'tecnologias', // Change the id
 		'name' => 'Tecnologías', // Change the name
+		'description' => 'The first (primary) sidebar.', // Better change description too!
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'certificaciones', // Change the id
+		'name' => 'Certificaciones', // Change the name
 		'description' => 'The first (primary) sidebar.', // Better change description too!
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -158,24 +179,42 @@ function bones_comments( $comment, $args, $depth ) {
 // ====================================
 
 // -----------------------------------
+// -----------------------------------
 // Breadcrumbs function
 // -----------------------------------
 // Return the post ancestors as breadcrumbs
-// Its necesary to echo the function when using it, ex: echo nw_breadcrumbs();
+// It's necesary to echo the function when using it, ex: echo nw_breadcrumbs();
 function nw_breadcrumbs(){
+	global $post;
+
 	$post_ancestors = array_reverse(get_post_ancestors($post->ID));
-	$separator = ' » ';
-	if($post_ancestors):
-		$breadcrumb = '';
+	$separator = ' / ';
+	$post_title = '<p>'.$post->post_title.'</p>';
+	$breadcrumb = '<a href="'.get_bloginfo("url").'">Inicio</a>'.$separator;
+
+	if(is_page()):
 		foreach ($post_ancestors as $ancestor): 
 			$breadcrumb .= '<a href="'.get_permalink($ancestor).'">'.get_post($ancestor)->post_title.'</a>'.$separator;
 		endforeach;
-		$breadcrumb .= '<p>'.get_the_title().'</p>';
+		$breadcrumb .= $post_title;
 		return trim($breadcrumb, $separator);
+	elseif(is_category()):
+		$breadcrumb .= single_cat_title('', false);
+		return $breadcrumb;
+	elseif(is_single()):
+		if(nw_categories()):
+			$breadcrumb .= nw_categories().$separator.$post_title;
+			return $breadcrumb;
+		endif;
+
+		$breadcrumb .= single_cat_title('', false).$post_title;
+		return $breadcrumb;
 	else:
-		$breadcrumb = FALSE;
+		$breadcrumb .= $post_title;
 		return $breadcrumb;
 	endif;
+	
+	return $breadcrumb;
 }
 
 // -----------------------------------
@@ -224,7 +263,8 @@ function nw_tags(){
 
 //*************************** Widgets Import *************************** //
 
-// require_once( 'widget/widget-custom-link.php' ); // Agrega un custom url, icon o imagen.
+require_once( 'widget/widget-custom-video.php' ); // Agrega un custom url, icon o imagen.
+require_once( 'widget/widget-custom-link.php' ); // Agrega un custom url, icon o imagen.
 // require_once( 'widget/widget-post-type-feed.php' ); // Agrega un custom url, icon o imagen.
 
 

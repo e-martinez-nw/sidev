@@ -76,11 +76,6 @@ class Custom_Link extends WP_Widget {
 	<div class="widget-custom-link <?php echo $custom_class ? $custom_class : ''; ?>">
 		<?php echo $url ? '<a href="'.$url.'">':''; ?>
 
-			<?php if($icon): ?>
-				<div class="widget-custom-link-icon">
-					<i class="<?php echo $icon; ?>"></i>
-				</div><!-- end .widget-custom-link-icon -->
-			<?php endif; ?>
 
 			<?php if($image_url): ?>
 				<div class="widget-custom-link-image">
@@ -90,7 +85,13 @@ class Custom_Link extends WP_Widget {
 
 			<?php if($link_title): ?>
 				<div class="widget-custom-link-title">
-					<p><?php echo $link_title; ?></p>
+					<h4><?php echo $link_title; ?>
+						<?php if($icon): ?>
+							<div class="widget-custom-link-icon">
+								<i class="<?php echo $icon; ?>"></i>
+							</div><!-- end .widget-custom-link-icon -->
+						<?php endif; ?>
+					</h4>
 				</div><!-- end .widget-custom-link-title -->
 			<?php endif; ?>
 
