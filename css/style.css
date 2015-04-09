@@ -13,6 +13,12 @@ License URI: -
 Happy Developing!
 
 ******************************************************************/
+/******************************************************************
+NOTAS IMPORANTES:
+
+Para el dropdown se modificó el archivo navbar.less, agregando @grid-float-breakpoint: 991px; en la línea 63
+
+******************************************************************/
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
@@ -4933,7 +4939,7 @@ tbody.collapse.in {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -6131,15 +6137,20 @@ blockquote {
   position: relative;
 }
 #main-header .logo {
+  float: left;
   cursor: pointer;
 }
 #main-header .logo img {
   max-height: 95px;
   margin: 0 !important;
 }
+#main-header #main-nav {
+  padding: 0;
+}
 #main-header #main-nav ul {
   list-style: none !important;
   margin-bottom: 0;
+  padding: 0;
 }
 #main-header #main-nav ul li {
   display: inline-block;
@@ -6154,7 +6165,7 @@ blockquote {
   font-size: 14px;
   color: #666666;
   display: block;
-  padding: 40px 30px 35px;
+  padding: 40px 10px 35px;
   cursor: pointer;
 }
 #main-header #main-nav ul li a:hover {
@@ -6258,6 +6269,12 @@ blockquote {
 #main-nav ul ul li > li:hover a {
   font-size: 14px;
   color: #ffffff;
+}
+.navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.navbar-brand {
+  height: auto;
 }
 #slider-index {
   position: relative;
@@ -6367,6 +6384,7 @@ blockquote {
 #forjando .automatizacion .widget-custom-link-image img {
   height: 100%;
   width: auto;
+  max-width: none;
 }
 #forjando .automatizacion .widget_text {
   position: absolute;
@@ -6635,9 +6653,10 @@ footer:before {
 /* Midum devices only (desktops, from 992px to 1200px) */
 /* Medium devices and up (desktops, 992px and up) */
 /* Small devices only (tablets, from 768px to 992px) */
-/* Small devices and up (tablets, 768px and up) */
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  .navbar-toggle {
+    display: block !important;
+  }
   .admin-bar-fix {
     margin-top: 0px;
   }
@@ -6646,16 +6665,20 @@ footer:before {
   }
   .navbar-header {
     cursor: pointer;
+    float: none;
   }
   #main-nav ul {
     width: 100%;
     padding: 0;
+    border: 1px solid #cccccc;
   }
   #main-nav ul li {
     width: 100%;
   }
   #main-nav ul li a {
     display: block;
+    padding: 10px 0 !important;
+    text-align: center;
   }
   #main-nav ul li > ul {
     min-width: 100%;
@@ -6664,5 +6687,20 @@ footer:before {
   }
   .carousel-slide {
     height: 180px;
+  }
+  #forjando .intelligent-smart .widget_text,
+  #forjando .automatizacion .widget_text,
+  #forjando .tecnologias .widget_text {
+    font-size: 10px;
+  }
+}
+/* Small devices and up (tablets, 768px and up) */
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  #slider-index:before {
+    height: 100px !important;
+  }
+  #slider-index:after {
+    height: 16px !important;
   }
 }

@@ -14,6 +14,15 @@ Happy Developing!
 
 ******************************************************************/
 
+/******************************************************************
+NOTAS IMPORANTES:
+
+Para el dropdown se modificó el archivo navbar.less, agregando @grid-float-breakpoint: 991px; en la línea 63
+
+******************************************************************/
+
+
+
 //	Import all your stuff here
 // ------------------------------------
 
@@ -225,15 +234,19 @@ blockquote{
 	.relative;
 
 	.logo {
+		float: left;
 		cursor: pointer;
 
 		img {max-height: 95px; margin: 0 !important;}
 	}//.logo
 	
 	#main-nav {
+		padding: 0;
+
 		ul {
 			list-style: none !important;
 			margin-bottom: 0;
+			padding: 0;
 
 			li {
 				display: inline-block;
@@ -249,7 +262,7 @@ blockquote{
 					font-size: 14px;
 					color: @gray;
 					display: block;
-					padding: 40px 30px 35px;
+					padding: 40px 10px 35px;
 					cursor: pointer;
 
 					&:hover {
@@ -329,10 +342,10 @@ blockquote{
 	}//end ul
 }//end #main-nav
 // Bootstrap collapse classese
-// .navbar-toggle{
-// 	.icon-bar{ background-color: @black; }
-// }
-// .navbar-brand{ height: auto; }
+.navbar-toggle{
+	.icon-bar{ background-color: @black; }
+}
+.navbar-brand{ height: auto; }
 
 // Carousel
 // ====================================
@@ -456,6 +469,7 @@ blockquote{
 			img {
 				height: 100%;
 				width: auto;
+				max-width: none;
 			}//img
 		}//.widget-custom-link-image
 
@@ -764,26 +778,25 @@ footer {
 @media (min-width: @screen-md-min) { }// Midum devices and up
 
 /* Small devices only (tablets, from 768px to 992px) */
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { }// Small devices only
+@media (max-width: @screen-sm-max) { 
 
-/* Small devices and up (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { }// Small devices and up
+	.navbar-toggle{display: block !important;}
 
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: @screen-xs-max) { 
 	.admin-bar-fix{ margin-top: 0px; }
 	.header-fix-size{ display: none; }
 
-	.navbar-header{ cursor: pointer; }
+	.navbar-header{ cursor: pointer; float: none;}
 	.navbar-brand{ //margin: 0; color: @white; font-weight: 400; 
 	}
 
 	#main-nav{
-		ul{ width: 100%; padding: 0;
+		ul{ width: 100%; padding: 0; border: 1px solid @light-gray;
 			li{
 				width: 100%;
 				a{
 					display: block;
+					padding: 10px 0 !important;
+					text-align: center;
 					&:hover{ }
 				}
 
@@ -797,4 +810,54 @@ footer {
 	}// #main-nav
 
 	.carousel-slide{ height: 180px; }
+
+	#forjando{
+	 	.intelligent-smart, .automatizacion, .tecnologias{
+	 		.widget_text {font-size: 10px;}
+	 	} 
+	}
+}// Small devices only
+
+/* Small devices and up (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {}// Small devices and up
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: @screen-xs-max) {
+	#slider-index{
+		&:before {height: 100px !important;}
+		&:after {height: 16px !important;}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
