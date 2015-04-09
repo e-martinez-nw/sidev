@@ -5981,7 +5981,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   src: url("../fonts/Open_Sans/OpenSans-BoldItalic.ttf");
 }
 body {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 1.6em;
   color: #222222;
   background-color: #205c7a;
   font-family: "OpenSans", Arial, sans-serif;
@@ -5996,7 +5997,7 @@ h6 {
   color: #205c7a;
 }
 h1 {
-  font-size: 48px;
+  font-size: 38px;
 }
 h2 {
   font-size: 44px;
@@ -6017,7 +6018,6 @@ img {
   vertical-align: top;
   max-width: 100%;
   height: auto;
-  margin: 5px 15px 15px 0px !important;
 }
 ol li {
   counter-increment: step-counter;
@@ -6151,6 +6151,7 @@ blockquote {
   content: none !important;
 }
 #main-header #main-nav ul li a {
+  font-size: 14px;
   color: #666666;
   display: block;
   padding: 40px 30px 35px;
@@ -6230,6 +6231,7 @@ blockquote {
 }
 #main-nav ul li a {
   color: #ffffff;
+  font-size: 14px;
 }
 #main-nav ul li a:hover {
   color: #333333;
@@ -6242,6 +6244,7 @@ blockquote {
 }
 #main-nav ul ul li:hover {
   background-color: #1a1a1a;
+  font-size: 14px;
 }
 #main-nav ul ul li:hover a {
   color: #ffffff;
@@ -6253,6 +6256,7 @@ blockquote {
   background-color: #1a1a1a;
 }
 #main-nav ul ul li > li:hover a {
+  font-size: 14px;
   color: #ffffff;
 }
 #slider-index {

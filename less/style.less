@@ -77,7 +77,8 @@ Happy Developing!
 // ====================================
 
 body{ 
-	font-size: 14px; 
+	font-size: 18px;
+	line-height: 1.6em; 
 	color: #222222; 
 	background-color: @dark-blue;
 	font-family: @primaryFontFamily;
@@ -85,7 +86,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{ font-family: @primaryFontFamily; color: @dark-blue;}
 
-h1 { font-size: 48px;}
+h1 { font-size: 38px;}
 h2 { font-size: 44px;}
 h3 { font-size: 39px;}
 h4 { font-size: 35px;}
@@ -97,7 +98,6 @@ img{
 	vertical-align: top;
 	max-width: 100%;
 	height: auto; 
-	margin: 5px 15px 15px 0px !important;
 } // Remove 2 pixels under the image
 
 ol li {
@@ -246,6 +246,7 @@ blockquote{
 				}
 
 				a {
+					font-size: 14px;
 					color: @gray;
 					display: block;
 					padding: 40px 30px 35px;
@@ -301,6 +302,7 @@ blockquote{
 		li{ // padding: 0px 10px; // Customize This!
 
 			a{  color: @lightColor; // Customize This!
+				font-size: 14px;
 				&:hover{ color: @darkColor; // Customize This! 
 				}
 			}
@@ -311,13 +313,14 @@ blockquote{
 		ul{ background-color: @darkColor; // Customize This!
 			li{
 				&:hover{ background-color: darken(@darkColor, 10%); // Customize This!
+					font-size: 14px;
 					a{ color: @lightColor; } // Customize This!
 				}
 				>a{ color: @lightColor; // Customize This! }
 			}//end li
 
 				>li { &:hover{  background-color: darken(@darkColor, 10%);  // Customize This!
-						a{ color: @lightColor; } // Customize This!
+						a{ font-size:14px; color: @lightColor; } // Customize This!
 					}
 					a{ }
 				}//end li
@@ -662,6 +665,7 @@ blockquote{
 
 // Pages
 // ====================================
+
 article {
 	.white;
 	padding-bottom: 50px;
