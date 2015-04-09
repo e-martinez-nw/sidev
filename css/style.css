@@ -6581,6 +6581,7 @@ footer .contacto li {
 }
 footer .contacto li a {
   color: #ffffff;
+  font-size: 14px;
   text-transform: uppercase;
 }
 footer .contacto li a:hover {
@@ -6589,6 +6590,7 @@ footer .contacto li a:hover {
 }
 footer .legales {
   border-top: 1px solid #42728a;
+  font-size: 14px;
 }
 footer .legales .nuevaweb {
   margin: 10px 0 0;
