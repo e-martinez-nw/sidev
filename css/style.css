@@ -6165,7 +6165,7 @@ blockquote {
   font-size: 14px;
   color: #666666;
   display: block;
-  padding: 40px 10px 35px;
+  padding: 40px 29px 35px;
   cursor: pointer;
 }
 #main-header #main-nav ul li a:hover {
@@ -6390,6 +6390,7 @@ blockquote {
   position: absolute;
   top: 80px;
   margin: 10px 20px 10px 0;
+  text-align: justify;
   display: none;
   font-size: 18px;
   transition: .2s;
@@ -6459,6 +6460,7 @@ blockquote {
   margin: 10px 20px 10px 0;
   display: none;
   font-size: 18px;
+  text-align: justify;
   transition: .2s;
 }
 #forjando .intelligent-smart .widget_text:after,
