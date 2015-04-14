@@ -6586,6 +6586,19 @@ article {
   width: 100%;
   z-index: 999;
 }
+.container input,
+.container textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.container input[type="submit"] {
+  background-color: #33779E;
+  color: white;
+  border: 0;
+}
+.container input[type="submit"]:hover {
+  background-color: #164E6F;
+}
 footer {
   background-color: #205c7a;
   position: relative;
