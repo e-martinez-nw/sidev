@@ -88,7 +88,7 @@ Para el dropdown se modificó el archivo navbar.less, agregando @grid-float-brea
 body{ 
 	font-size: 18px;
 	line-height: 1.6em; 
-	color: #222222; 
+	color: @dark-gray; 
 	background-color: @dark-blue;
 	font-family: @primaryFontFamily;
 }
@@ -713,6 +713,77 @@ article {
 
 .container input[type="submit"]:hover {
   background-color: #164E6F;
+}
+
+// Category
+// ====================================
+#category {
+	.white;
+	padding-top: 60px;
+
+	h3 {font-size: 20px;}
+	p {font-size: 14px; line-height: 1.4em;}
+
+	article {
+		footer {
+			background-color: @white;
+			color: @dark-gray;
+			margin: 0;
+		}
+	}
+}
+
+// Search
+// ====================================
+#search {
+	.white;
+
+	article {
+		padding-bottom: 20px;
+	}
+
+	.container input {width: 80%;}
+
+	input#searchsubmit {width: 30px;}
+
+	i.fa.fa-search {
+	    position: absolute;
+	    top: 6px;
+	    left: 6px;
+	}
+
+	label.search-btn {
+	    position: relative;
+	    top: 6px;
+	}
+
+	.no-result h3 {font-size: 20px; padding-bottom: 50px;}
+
+	.page-numbers li {float: left;}
+}
+
+// 404 
+// ====================================
+#error {
+	.white;
+
+	h1 {font-size: 90px;}
+
+	.container input {width: 80%;}
+
+	input#searchsubmit {width: 30px;}
+
+	i.fa.fa-search {
+	    position: absolute;
+	    top: 6px;
+	    left: 6px;
+	}
+
+	label.search-btn {
+	    position: relative;
+	    top: 6px;
+	}
+	.search-form {padding-bottom: 50px;}
 }
 
 // Footer // Your Main Footer Css goes here.

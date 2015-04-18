@@ -21,7 +21,7 @@
 					</div><!-- row -->
 				</div><!-- container -->
 					
-				<div class="header-thumb" style="background-image:url(<?=$url?>); height:240px; background-position:center;"></div>
+				<div class="header-thumb" style="background-image:url(<?=$url?>); height:240px; background-position:center; background-size:cover;"></div>
 					
 				<div class="container">
 					<div class="row">

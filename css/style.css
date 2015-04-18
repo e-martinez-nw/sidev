@@ -6599,6 +6599,74 @@ article {
 .container input[type="submit"]:hover {
   background-color: #164E6F;
 }
+#category {
+  background-color: #ffffff;
+  padding-top: 60px;
+}
+#category h3 {
+  font-size: 20px;
+}
+#category p {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+#category article footer {
+  background-color: #ffffff;
+  color: #222222;
+  margin: 0;
+}
+#search {
+  background-color: #ffffff;
+}
+#search article {
+  padding-bottom: 20px;
+}
+#search .container input {
+  width: 80%;
+}
+#search input#searchsubmit {
+  width: 30px;
+}
+#search i.fa.fa-search {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+#search label.search-btn {
+  position: relative;
+  top: 6px;
+}
+#search .no-result h3 {
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+#search .page-numbers li {
+  float: left;
+}
+#error {
+  background-color: #ffffff;
+}
+#error h1 {
+  font-size: 90px;
+}
+#error .container input {
+  width: 80%;
+}
+#error input#searchsubmit {
+  width: 30px;
+}
+#error i.fa.fa-search {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+#error label.search-btn {
+  position: relative;
+  top: 6px;
+}
+#error .search-form {
+  padding-bottom: 50px;
+}
 footer {
   background-color: #205c7a;
   position: relative;
