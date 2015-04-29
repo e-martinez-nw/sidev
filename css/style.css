@@ -6628,6 +6628,7 @@ article {
 .aplicacion:hover {
   background-color: #80b853 !important;
   border: 1px solid #67993f;
+  text-decoration: none;
 }
 #search {
   background-color: #ffffff;
