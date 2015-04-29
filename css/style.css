@@ -6615,6 +6615,20 @@ article {
   color: #222222;
   margin: 0;
 }
+.aplicacion {
+  font-weight: normal;
+  font-family: "OpenSans", Arial, sans-serif;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 15px 20px 15px 20px;
+  background-color: #205c7a;
+  border-radius: 2px;
+  border: 1px solid #205c7a;
+}
+.aplicacion:hover {
+  background-color: #80b853 !important;
+  border: 1px solid #67993f;
+}
 #search {
   background-color: #ffffff;
 }
@@ -6741,7 +6755,7 @@ footer:before {
     display: block !important;
   }
   .admin-bar-fix {
-    margin-top: 0px;
+    margin-top: 0;
   }
   .header-fix-size {
     display: none;

@@ -733,6 +733,24 @@ article {
 	}
 }
 
+// Intelligent-Smart Grid
+// ====================================
+.aplicacion {
+	font-weight: normal;
+	font-family: "OpenSans", Arial, sans-serif;
+	color: #fff !important;
+	text-decoration: none;
+	padding: 15px 20px 15px 20px;
+	background-color: @dark-blue;
+	border-radius: 2px;
+	border: 1px solid @dark-blue;
+
+	&:hover {
+		background-color: #80b853 !important;
+		border: 1px solid #67993f;
+	}
+}
+
 // Search
 // ====================================
 #search {
@@ -870,13 +888,10 @@ footer {
 
 /* Small devices only (tablets, from 768px to 992px) */
 @media (max-width: @screen-sm-max) { 
-
 	.navbar-toggle{display: block !important;}
-
-	.admin-bar-fix{ margin-top: 0px; }
+	.admin-bar-fix {margin-top: 0;}
 	.header-fix-size{ display: none; }
-
-	.navbar-header{ cursor: pointer; float: none;}
+	.navbar-header{cursor: pointer; float: none;}
 	.navbar-brand{ //margin: 0; color: @white; font-weight: 400; 
 	}
 
@@ -906,7 +921,7 @@ footer {
 	 	.intelligent-smart, .automatizacion, .tecnologias{
 	 		.widget_text {font-size: 10px;}
 	 	} 
-	}
+	}// #forjando
 }// Small devices only
 
 /* Small devices and up (tablets, 768px and up) */
