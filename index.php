@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 	<div id="slider-index">
-		<?php putRevSlider("slider1","homepage") ?>
+		<?php if (is_handheld()) {
+				putRevSlider("slidermobile");
+			} else {
+				putRevSlider("slider1"); 
+			} ?>
+			
 	</div><!--.slider-index -->
 
 	<section id="forjando">
