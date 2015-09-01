@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php if(function_exists('putRevSlider')){ ?>
 	<div id="slider-index">
 		<?php if (is_handheld()) {
 				putRevSlider("slidermobile");
@@ -7,6 +8,7 @@
 			} ?>
 			
 	</div><!--.slider-index -->
+<?php } ?>
 
 	<section id="forjando">
 		<div class="container">
